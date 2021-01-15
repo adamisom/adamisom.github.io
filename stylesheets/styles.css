@@ -1,0 +1,122 @@
+/*
+Things I'll likely want to use:
+ - ... well I gotta research centering!
+ 	- I may want to float (?)
+ 	- I may want certain positioning
+ 	- I may want to use flexbox (for centering!)
+ - text-align: center;
+ - oh, when using display: flex, don't forget 
+ 		properties e.g. justify-content: space-between;
+ 		and/or align-items, flex-direction, flex-wrap (are these for children?)
+ - font-size: I can now do e.g. 2 rem;
+ - cool, John uses filter:brightness on a:hover
+ - huh if I use svgs, do I want to use fill: #acolor; ? (John does)
+ - may want box shadow on the project images (Will does)
+ - oh, line-height is a basic way to maybe improve esthetic
+ - ooh, use cursor: pointer; for the github etc. logos
+ - Will uses position: fixed; for logos
+ - Revisit John's & Will's media query CSS later
+ - 
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap");
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+:root {
+	--font-family-header: "Montserrat", sans-serif;
+	--font-family-body: "Open Sans", sans-serif;
+	--color-offwhite: #f7f7f7;
+	--color-white: #ffffff;
+	--color-mediumspringgreen: #00f2b3;
+}
+
+html {
+	background-color: var(--color-offwhite);
+	font-size: 16px;
+	/*scroll-behavior: smooth;*/ /* cool if I end up using a nav */
+}
+
+body {
+	font-family: var(--font-family-body);
+}
+
+section {
+	margin: 2rem auto; /* so top/bottom is 32px: this will likely change */
+	text-align: center;
+}
+
+section#haven {
+	background-color: var(--color-white);
+}
+
+h2,
+h4 {
+	font-family: var(--font-family-header);
+}
+
+a {
+	text-decoration: none;
+}
+
+.flexbox {
+	display: flex;
+}
+
+.flexbox-center {
+	justify-content: center;
+	align-items: center;
+}
+
+.flexbox-horizontal {
+	flex-direction: column;
+}
+.flexbox-vertical {
+	flex-direction: row;
+}
+
+.contact {
+	/* eliminate class if not used */
+}
+
+.header-contact {
+	position: absolute;
+	top: 2rem;
+	right: 3rem;
+}
+
+.footer-contact {
+	/*position: absolute;
+	bottom: 5rem;
+	left: 50%;
+	width: 400px;
+	margin-left: -200px;*/
+}
+
+.logo-links {
+	display: flex;
+	justify-content: space-between;
+	padding: 5px;
+	height: 45px; /* 35 + 2x5px (padding) */
+	width: 145px; /* should space 15px apart (3x35+2x15+2x5=135) */
+}
+
+.footer-contact h4 {
+	/* */
+}
+
+.footer-contact a {
+	/* */
+}
+
+.footer-contact h4 {
+	/* */
+}
+
+#avatar {
+	border-radius: 50%;
+}
