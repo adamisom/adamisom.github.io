@@ -1,4 +1,167 @@
 /*
+		global
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap");
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+:root {
+	--font-family-header: "Montserrat", sans-serif;
+	--font-family-body: "Open Sans", sans-serif;
+	--color-offwhite: #f7f7f7;
+	/*--color-lightwarmblue: #3ee6e1;
+	--color-mediumspringgreen: #00f2b3;*/
+}
+
+html {
+	background-color: var(--color-offwhite);
+	font-size: 16px;
+	/*scroll-behavior: smooth;*/ /* would be cool if I end up using a nav */
+}
+
+body {
+	font-family: var(--font-family-body);
+}
+
+/*
+		sections and other flexboxes
+*/
+
+#profile > p,
+#haven > p {
+	max-width: 35rem;
+	text-align: center;
+}
+
+section {
+	padding: 50px;
+}
+
+/*
+		other styling
+*/
+
+#haven {
+	background-color: white;
+}
+
+h2,
+h4 {
+	font-family: var(--font-family-header);
+}
+
+h2 {
+	font-size: 2.2rem;
+	margin: 1.5rem 0;
+}
+
+h4 {
+	font-size: 1.2rem;
+	margin: 1rem 0;
+}
+
+a {
+	/*color: white;*/
+	text-decoration: none;
+}
+
+.btn {
+	background-color: transparent;
+	border: 2px solid gray;
+	border-radius: 5px;
+	cursor: pointer;
+	padding: 0 2rem;
+	text-align: center;
+}
+
+/* do I want those both center? */
+.flexbox-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.vert {
+	flex-direction: column;
+}
+
+.horiz {
+	flex-direction: row;
+}
+
+.other-project {
+	margin: 0 2%;
+	width: 25%;
+}
+
+.other-project > img {
+	max-width: 100%;
+}
+
+.other-project > h4,
+.other-project > p {
+	text-align: center;
+}
+
+/*height: 35 + 2x5px (padding)
+width: should space 15px apart (3x35+2x15+2x5=135)*/
+.logo-links {
+	display: flex;
+	/*justify-content: space-between;
+	padding: 5px;*/
+}
+
+/*a > i,*/
+.icon {
+	color: var(--color-lightwarmblue);
+}
+
+.icon:before {
+	font-size: 2rem;
+}
+
+.icon:hover,
+.btn:hover {
+	color: var(--color-mediumspringgreen);
+}
+
+.footer-contact h4 {
+	/* */
+}
+
+.footer-contact a {
+	/* */
+}
+
+#avatar {
+	border-radius: 50%;
+	width: 15rem;
+}
+
+#haven-logo {
+	max-width: 50rem;
+}
+
+/*
+		media queries
+*/
+
+@media (max-width: 480px) {
+	#profile > p,
+	#haven > p {
+		max-width: 400px;
+	}
+}
+
+/*
+
+TODOS
+
 Things I'll likely want to use:
  - ... well I gotta research centering!
  	- I may want to float (?)
@@ -18,105 +181,3 @@ Things I'll likely want to use:
  - Revisit John's & Will's media query CSS later
  - 
  */
-
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap");
-
-*,
-*:before,
-*:after {
-	box-sizing: border-box;
-}
-
-:root {
-	--font-family-header: "Montserrat", sans-serif;
-	--font-family-body: "Open Sans", sans-serif;
-	--color-offwhite: #f7f7f7;
-	--color-white: #ffffff;
-	--color-mediumspringgreen: #00f2b3;
-}
-
-html {
-	background-color: var(--color-offwhite);
-	font-size: 16px;
-	/*scroll-behavior: smooth;*/ /* cool if I end up using a nav */
-}
-
-body {
-	font-family: var(--font-family-body);
-}
-
-section {
-	margin: 2rem auto; /* so top/bottom is 32px: this will likely change */
-	text-align: center;
-}
-
-section#haven {
-	background-color: var(--color-white);
-}
-
-h2,
-h4 {
-	font-family: var(--font-family-header);
-}
-
-a {
-	text-decoration: none;
-}
-
-.flexbox {
-	display: flex;
-}
-
-.flexbox-center {
-	justify-content: center;
-	align-items: center;
-}
-
-.flexbox-horizontal {
-	flex-direction: column;
-}
-.flexbox-vertical {
-	flex-direction: row;
-}
-
-.contact {
-	/* eliminate class if not used */
-}
-
-.header-contact {
-	position: absolute;
-	top: 2rem;
-	right: 3rem;
-}
-
-.footer-contact {
-	/*position: absolute;
-	bottom: 5rem;
-	left: 50%;
-	width: 400px;
-	margin-left: -200px;*/
-}
-
-.logo-links {
-	display: flex;
-	justify-content: space-between;
-	padding: 5px;
-	height: 45px; /* 35 + 2x5px (padding) */
-	width: 145px; /* should space 15px apart (3x35+2x15+2x5=135) */
-}
-
-.footer-contact h4 {
-	/* */
-}
-
-.footer-contact a {
-	/* */
-}
-
-.footer-contact h4 {
-	/* */
-}
-
-#avatar {
-	border-radius: 50%;
-}

@@ -20,70 +20,49 @@
 	</head>
 	<body>
 		<main>
-			<section
-				class="contact header-contact"
-				class="flexbox flexbox-center flexbox-horizontal"
-			>
-				<div class="logo-links">
-					<a href="" target="_blank">
-						<img
-							class="logo-link"
-							src="https://via.placeholder.com/35/000000/FFFFFF/?text=LinkedIn"
-							alt="link to LinkedIn profile"
-						/>
+			<section class="header-contact">
+				<!-- <div class="logo-links">
+					<a href="https://www.linkedin.com/in/adamisom/" target="_blank">
+						<i class="fab fa-linkedin"></i>
 					</a>
-					<a href="" target="_blank">
-						<img
-							class="logo-link"
-							src="https://via.placeholder.com/35/000000/FFFFFF/?text=GitHub"
-							alt="link to GitHub profile"
-						/>
+					<a href="https://github.com/adamisom" target="_blank">
+						<i class="fab fa-linkedin"></i>
 					</a>
-					<a href="" target="_blank">
-						<img
-							class="logo-link"
-							src="https://via.placeholder.com/35/000000/FFFFFF/?text=resume"
-							alt="link to resume pdf"
-						/>
+					<a
+						href="https://adamisom.is/assets/Resume_of_ADAM_ISOM.pdf"
+						target="_blank"
+					>
+						<i class="fab fa-linkedin"></i>
 					</a>
-				</div>
+				</div> -->
 			</section>
 
-			<section id="profile" class="flexbox flexbox-center flexbox-horizontal">
-				<img
-					id="avatar"
-					src="https://via.placeholder.com/250/000000/FFFFFF/?text=Photo of me"
-					alt="Photo of Adam Isom"
-				/>
+			<section id="profile" class="flexbox-center vert">
+				<img id="avatar" src="assets/img/me.jpg" alt="Photo of Adam Isom" />
 				<h2 id="name">Adam Isom</h2>
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-					faucibus diam id libero finibus, at tincidunt velit porttitor. Donec
-					eu metus pharetra, efficitur sem vel, congue velit. Sed sit amet
-					rhoncus lectus. Cras velit neque, suscipit quis tellus sed, auctor
-					accumsan ligula. Ut ultricies efficitur faucibus. Vivamus a tortor
-					vehicula, eleifend diam ut, gravida mauris. Phasellus malesuada
-					vestibulum quam, eu auctor felis. Mauris ultricies ut mi a blandit.
-					Mauris at malesuada mi, vitae rhoncus nisl.
+					I'm a software engineer with multiple years of experience building
+					full-stack applications using AWS, Node.js, Ruby, JavaScript/ES6+,
+					PostgreSQL, Rails, and React. Most recently, I built Haven, a secrets
+					manager.
 				</p>
 			</section>
 
-			<section id="haven" class="flexbox flexbox-center flexbox-horizontal">
-				<a id="clickable-haven-logo" href="" target="_blank">
+			<section id="haven" class="flexbox-center vert">
+				<a href="https://haven-secrets.github.io/" target="_blank">
 					<img
-						src="https://via.placeholder.com/500x150/000000/FFFFFF/?text=HavenLogo"
-						alt=""
+						id="haven-logo"
+						src="assets/img/haven-header-logo.png"
+						alt="link to Haven case study"
 					/>
 				</a>
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-					faucibus diam id libero finibus, at tincidunt velit porttitor. Donec
-					eu metus pharetra, efficitur sem vel, congue velit. Sed sit amet
-					rhoncus lectus. Cras velit neque, suscipit quis tellus sed, auctor
-					accumsan ligula. Ut ultricies efficitur faucibus. Vivamus a tortor
-					vehicula, eleifend diam ut, gravida mauris. Phasellus malesuada
-					vestibulum quam, eu auctor felis. Mauris ultricies ut mi a blandit.
-					Mauris at malesuada mi, vitae rhoncus nisl.
+					Haven is an open-source developer tool for managing your application
+					secrets. Built using Node.js and Amazon Web Services, it is easy to
+					set up and integrate with your Node applications. It protects your
+					secrets through encryption, access control, and injection at runtime.
+					Haven also offers both a UI and a CLI to help make secrets management
+					easy.
 				</p>
 				<a
 					id="case-study"
@@ -94,99 +73,48 @@
 				>
 			</section>
 
-			<!-- do I really want flexbox-horizontal here? -->
-			<section id="projects" class="flexbox flexbox-center flexbox-horizontal">
+			<section id="projects" class="flexbox-center vert">
 				<h2>Other Projects</h2>
-				<ul class="flexbox flexbox-center flexbox-vertical">
-					<li>
-						<img
-							src="https://via.placeholder.com/300x200/000000/FFFFFF/?text=Reaction"
-							alt="TODO"
-						/>
-						<h4>Project Lorem Ipsum</h4>
+				<ul class="flexbox-center horiz">
+					<li class="other-project">
+						<img src="assets/img/kanban.png" alt="TODO" />
+						<h4>Kanban Board</h4>
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-							faucibus diam id libero finibus, at tincidunt velit porttitor.
-							Donec eu metus pharetra, efficitur sem vel, congue velit. Sed sit
-							amet rhoncus lectus. Cras velit neque, suscipit quis tellus sed,
-							auctor accumsan ligula. Ut ultricies efficitur faucibus. Vivamus a
-							tortor vehicula, eleifend diam ut, gravida mauris. Phasellus
-							malesuada vestibulum quam, eu auctor felis. Mauris ultricies ut mi
-							a blandit. Mauris at malesuada mi, vitae rhoncus nisl.
+							A kanban board application, built with Ruby on Rails, PostgreSQL,
+							React, and Redux.
 						</p>
 					</li>
-					<li>
-						<img
-							src="https://via.placeholder.com/300x200/000000/FFFFFF/?text=AirlineRoutes"
-							alt="TODO"
-						/>
-						<h4>Project Lorem Ipsum</h4>
+					<li class="other-project">
+						<img src="assets/img/airline-routes.png" alt="TODO" />
+						<h4>Airline Routes</h4>
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-							faucibus diam id libero finibus, at tincidunt velit porttitor.
-							Donec eu metus pharetra, efficitur sem vel, congue velit. Sed sit
-							amet rhoncus lectus. Cras velit neque, suscipit quis tellus sed,
-							auctor accumsan ligula. Ut ultricies efficitur faucibus. Vivamus a
-							tortor vehicula, eleifend diam ut, gravida mauris. Phasellus
-							malesuada vestibulum quam, eu auctor felis. Mauris ultricies ut mi
-							a blandit. Mauris at malesuada mi, vitae rhoncus nisl.
+							A web application that allows viewing and filtering of airline
+							routes, built with React.
 						</p>
 					</li>
-					<li>
-						<img
-							src="https://via.placeholder.com/300x200/000000/FFFFFF/?text=TicketManager"
-							alt="TODO"
-						/>
-						<h4>Project Lorem Ipsum</h4>
+					<li class="other-project">
+						<img src="assets/img/ugh-ticket-manager.png" alt="TODO" />
+						<h4>Ticket Manager</h4>
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-							faucibus diam id libero finibus, at tincidunt velit porttitor.
-							Donec eu metus pharetra, efficitur sem vel, congue velit. Sed sit
-							amet rhoncus lectus. Cras velit neque, suscipit quis tellus sed,
-							auctor accumsan ligula. Ut ultricies efficitur faucibus. Vivamus a
-							tortor vehicula, eleifend diam ut, gravida mauris. Phasellus
-							malesuada vestibulum quam, eu auctor felis. Mauris ultricies ut mi
-							a blandit. Mauris at malesuada mi, vitae rhoncus nisl.
+							A helpdesk ticket tracking application, built with Ruby on Rails
+							and PostgreSQL.
 						</p>
 					</li>
 				</ul>
 			</section>
 
-			<section
-				class="contact footer-contact"
-				class="flexbox flexbox-center flexbox-horizontal"
-			>
+			<section class="flexbox-center vert">
 				<h4>Contact</h4>
 				<a id="email-link" href="mailto:adam.r.isom@gmail.com"
 					>adam.r.isom@gmail.com</a
 				>
-				<div class="logo-links">
-					<a href="https://www.linkedin.com/in/adamisom/" target="_blank">
-						<img
-							class="logo-link"
-							src="https://via.placeholder.com/35/000000/FFFFFF/?text=LinkedIn"
-							alt="link to LinkedIn profile"
-						/>
-					</a>
-					<a href="https://github.com/adamisom" target="_blank">
-						<img
-							class="logo-link"
-							src="https://via.placeholder.com/35/000000/FFFFFF/?text=GitHub"
-							alt="link to GitHub profile"
-						/>
-					</a>
-					<a
-						href="https://adamisom.is/assets/resume-NOT-FINAL.pdf"
-						target="_blank"
-					>
-						<img
-							class="logo-link"
-							src="https://via.placeholder.com/35/000000/FFFFFF/?text=resume"
-							alt="link to resume pdf"
-						/>
-					</a>
-				</div>
+				<!-- logos here -->
 			</section>
 		</main>
+
+		<script
+			src="https://kit.fontawesome.com/359ef23d69.js"
+			crossorigin="anonymous"
+		></script>
 	</body>
 </html>
