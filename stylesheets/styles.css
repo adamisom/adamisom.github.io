@@ -46,15 +46,16 @@ section#haven {
 .flexbox-center {
 	display: flex;
 	justify-content: center;
-	align-items: center;
 }
 
 .vert {
 	flex-direction: column;
+	align-items: center;
 }
 
 .other-projects-flex-dir {
 	flex-direction: row;
+	align-items: flex-start;
 }
 
 ul.logo-links {
