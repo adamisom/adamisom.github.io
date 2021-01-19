@@ -138,9 +138,7 @@ a.btn {
 }
 
 .btn:hover {
-	width: 31rem;
-	padding: 0.6rem 2rem;
-	font-size: 1.35rem;
+	font-size: 1.31rem;
 	color: var(--color-pleasant-blue);
 	background-color: rgba(144, 144, 144, 0.1);
 }
@@ -151,7 +149,8 @@ a.btn {
 }
 
 #haven-logo {
-	max-width: 50rem;
+	width: 10rem;
+	margin: 1rem auto;
 }
 
 .other-project > img {
@@ -166,15 +165,22 @@ a.btn {
 	font-size: 2.5rem;
 }
 
-.haven-link:before {
-	margin-left: 0.25rem;
-	margin-right: 0.25rem;
-	font-size: 0.75rem;
+.icon:hover {
 	color: var(--color-pleasant-blue);
 }
 
-.icon:hover {
+.inline-icon:before {
+	margin-left: 0.25rem;
+	margin-right: 0.25rem;
 	color: var(--color-pleasant-blue);
+}
+
+#link-icon:before {
+	font-size: 0.75rem;
+}
+
+#email-icon:before {
+	font-size: 1.25rem;
 }
 
 /**************************************
@@ -244,6 +250,11 @@ a.btn {
 }
 
 @media (max-width: 360px) {
+	img,
+	p {
+		max-width: 16rem !important;
+	}
+
 	a {
 		max-width: 12rem !important;
 	}
