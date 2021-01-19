@@ -1,6 +1,6 @@
-/*
+/**************************************
 		global
-*/
+**************************************/
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap");
 
@@ -14,40 +14,79 @@
 	--font-family-header: "Montserrat", sans-serif;
 	--font-family-body: "Open Sans", sans-serif;
 	--color-offwhite: #f7f7f7;
-	/*--color-lightwarmblue: #3ee6e1;
-	--color-mediumspringgreen: #00f2b3;*/
+	--color-pleasant-blue: #4a6ac1;
 }
 
 html {
-	background-color: var(--color-offwhite);
 	font-size: 16px;
-	/*scroll-behavior: smooth;*/ /* would be cool if I end up using a nav */
+	background-color: var(--color-offwhite);
 }
 
 body {
 	font-family: var(--font-family-body);
 }
 
-/*
-		sections and other flexboxes
-*/
+/**************************************
+		layout (boxes)
+**************************************/
+
+section {
+	width: 100%;
+	padding: 3rem;
+}
+
+section.header-contact {
+	padding-top: 1rem;
+}
+
+section#haven {
+	padding-top: 1.5rem;
+}
+
+.flexbox-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.vert {
+	flex-direction: column;
+}
+
+.other-projects-flex-dir {
+	flex-direction: row;
+}
+
+ul.logo-links {
+	display: flex;
+	justify-content: space-between;
+	width: 11rem;
+	padding: 5px;
+}
+
+.footer-contact ul.logo-links {
+	padding-top: 2rem;
+}
+
+li.other-project {
+	width: 25%;
+	margin: 0 2%;
+}
+
+/**************************************
+		text
+**************************************/
 
 #profile > p,
 #haven > p {
 	max-width: 35rem;
+}
+
+#profile > p,
+#haven > p,
+.other-project > h4,
+.other-project > p {
 	text-align: center;
-}
-
-section {
-	padding: 50px;
-}
-
-/*
-		other styling
-*/
-
-#haven {
-	background-color: white;
 }
 
 h2,
@@ -60,124 +99,151 @@ h2 {
 	margin: 1.5rem 0;
 }
 
+h3 {
+	font-size: 1.7rem;
+	margin: 1.25rem 0;
+}
+
 h4 {
-	font-size: 1.2rem;
+	font-size: 1.3rem;
 	margin: 1rem 0;
 }
 
+/**************************************
+		visuals (images, colors)
+**************************************/
+
+section#haven {
+	background-color: white;
+}
+
 a {
-	/*color: white;*/
 	text-decoration: none;
+	color: var(--color-pleasant-blue);
 }
 
-.btn {
-	background-color: transparent;
-	border: 2px solid gray;
-	border-radius: 5px;
+a.btn {
+	width: 30rem;
+	margin: 2rem auto;
+	padding: 0.5rem 2rem;
+	border: 1px solid lightgray;
+	border-radius: 4px;
 	cursor: pointer;
-	padding: 0 2rem;
+	background-color: transparent;
+	color: black;
 	text-align: center;
+	text-transform: uppercase;
+	font-size: 1.3rem;
 }
 
-/* do I want those both center? */
-.flexbox-center {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.vert {
-	flex-direction: column;
-}
-
-.horiz {
-	flex-direction: row;
-}
-
-.other-project {
-	margin: 0 2%;
-	width: 25%;
-}
-
-.other-project > img {
-	max-width: 100%;
-}
-
-.other-project > h4,
-.other-project > p {
-	text-align: center;
-}
-
-/*height: 35 + 2x5px (padding)
-width: should space 15px apart (3x35+2x15+2x5=135)*/
-.logo-links {
-	display: flex;
-	/*justify-content: space-between;
-	padding: 5px;*/
-}
-
-/*a > i,*/
-.icon {
-	color: var(--color-lightwarmblue);
-}
-
-.icon:before {
-	font-size: 2rem;
-}
-
-.icon:hover,
 .btn:hover {
-	color: var(--color-mediumspringgreen);
-}
-
-.footer-contact h4 {
-	/* */
-}
-
-.footer-contact a {
-	/* */
+	width: 31rem;
+	padding: 0.6rem 2rem;
+	font-size: 1.35rem;
+	color: var(--color-pleasant-blue);
+	background-color: rgba(144, 144, 144, 0.1);
 }
 
 #avatar {
-	border-radius: 50%;
 	width: 15rem;
+	border-radius: 50%;
 }
 
 #haven-logo {
 	max-width: 50rem;
 }
 
-/*
-		media queries
-*/
+.other-project > img {
+	max-width: 100%;
+}
 
-@media (max-width: 480px) {
-	#profile > p,
-	#haven > p {
-		max-width: 400px;
+.icon {
+	color: black;
+}
+
+.icon:before {
+	font-size: 2.5rem;
+}
+
+.haven-link:before {
+	margin-left: 0.25rem;
+	margin-right: 0.25rem;
+	font-size: 0.75rem;
+	color: var(--color-pleasant-blue);
+}
+
+.icon:hover {
+	color: var(--color-pleasant-blue);
+}
+
+/**************************************
+		media queries
+**************************************/
+
+@media (min-width: 769px) {
+	.header-contact ul.logo-links {
+		float: right;
 	}
 }
 
-/*
+@media (max-width: 768px) {
+	img,
+	p {
+		max-width: 25rem !important;
+	}
 
-TODOS
+	a {
+		/* has 2rem left/right margin */
+		max-width: 21rem !important;
+	}
 
-Things I'll likely want to use:
- - ... well I gotta research centering!
- 	- I may want to float (?)
- 	- I may want certain positioning
- 	- I may want to use flexbox (for centering!)
- - text-align: center;
- - oh, when using display: flex, don't forget 
- 		properties e.g. justify-content: space-between;
- 		and/or align-items, flex-direction, flex-wrap (are these for children?)
- - font-size: I can now do e.g. 2 rem;
- - cool, John uses filter:brightness on a:hover
- - huh if I use svgs, do I want to use fill: #acolor; ? (John does)
- - may want box shadow on the project images (Will does)
- - oh, line-height is a basic way to maybe improve esthetic
- - ooh, use cursor: pointer; for the github etc. logos
- - Will uses position: fixed; for logos
- - Revisit John's & Will's media query CSS later
- - 
- */
+	.header-contact ul.logo-links {
+		margin: 0 auto;
+	}
+
+	ul.logo-links {
+		width: 9rem;
+	}
+
+	.other-projects-flex-dir {
+		flex-direction: column;
+	}
+
+	li.other-project {
+		width: 100%;
+		margin: 1.75rem auto;
+	}
+
+	.other-project img {
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+@media (max-width: 600px) {
+	img,
+	p {
+		max-width: 22rem !important;
+	}
+
+	a {
+		max-width: 18rem !important;
+	}
+}
+
+@media (max-width: 480px) {
+	img,
+	p {
+		max-width: 20rem !important;
+	}
+
+	a {
+		max-width: 16rem !important;
+	}
+}
+
+@media (max-width: 360px) {
+	a {
+		max-width: 12rem !important;
+	}
+}

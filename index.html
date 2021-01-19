@@ -1,10 +1,5 @@
 <!DOCTYPE html>
-<!-- TODOS:
- - add google analytics (looks like Will does?)
- - generate and add project images
- - 
- - 
--->
+<!-- TODO: add google analytics (see Will's site) -->
 <html>
 	<head>
 		<title>Adam Isom</title>
@@ -21,20 +16,26 @@
 	<body>
 		<main>
 			<section class="header-contact">
-				<!-- <div class="logo-links">
-					<a href="https://www.linkedin.com/in/adamisom/" target="_blank">
-						<i class="fab fa-linkedin"></i>
-					</a>
-					<a href="https://github.com/adamisom" target="_blank">
-						<i class="fab fa-linkedin"></i>
-					</a>
-					<a
-						href="https://adamisom.is/assets/Resume_of_ADAM_ISOM.pdf"
-						target="_blank"
-					>
-						<i class="fab fa-linkedin"></i>
-					</a>
-				</div> -->
+				<ul class="logo-links">
+					<li>
+						<a href="https://www.linkedin.com/in/adamisom/" target="_blank">
+							<i class="icon fab fa-linkedin"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://github.com/adamisom" target="_blank">
+							<i class="icon fab fa-github"></i>
+						</a>
+					</li>
+					<li>
+						<a
+							href="https://adamisom.is/assets/Resume_of_ADAM_ISOM.pdf"
+							target="_blank"
+						>
+							<i class="icon far fa-file"></i>
+						</a>
+					</li>
+				</ul>
 			</section>
 
 			<section id="profile" class="flexbox-center vert">
@@ -43,8 +44,10 @@
 				<p>
 					I'm a software engineer with multiple years of experience building
 					full-stack applications using AWS, Node.js, Ruby, JavaScript/ES6+,
-					PostgreSQL, Rails, and React. Most recently, I built Haven, a secrets
-					manager.
+					PostgreSQL, Rails, and React. Most recently, I built
+					<a href="https://haven-secrets.github.io/"
+						>Haven<i class="haven-link icon fas fa-external-link-alt"></i></a
+					>, a secrets manager.
 				</p>
 			</section>
 
@@ -64,18 +67,14 @@
 					Haven also offers both a UI and a CLI to help make secrets management
 					easy.
 				</p>
-				<a
-					id="case-study"
-					class="btn"
-					href="http://haven-secrets.github.io/"
-					target="_blank"
+				<a class="btn" href="http://haven-secrets.github.io/" target="_blank"
 					>Read the Case Study</a
 				>
 			</section>
 
 			<section id="projects" class="flexbox-center vert">
 				<h2>Other Projects</h2>
-				<ul class="flexbox-center horiz">
+				<ul class="flexbox-center other-projects-flex-dir">
 					<li class="other-project">
 						<img src="assets/img/kanban.png" alt="TODO" />
 						<h4>Kanban Board</h4>
@@ -104,11 +103,32 @@
 			</section>
 
 			<section class="flexbox-center vert">
-				<h4>Contact</h4>
+				<h3>Contact</h3>
 				<a id="email-link" href="mailto:adam.r.isom@gmail.com"
 					>adam.r.isom@gmail.com</a
 				>
-				<!-- logos here -->
+				<div class="footer-contact">
+					<ul class="logo-links">
+						<li>
+							<a href="https://www.linkedin.com/in/adamisom/" target="_blank">
+								<i class="icon fab fa-linkedin"></i>
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/adamisom" target="_blank">
+								<i class="icon fab fa-github"></i>
+							</a>
+						</li>
+						<li>
+							<a
+								href="https://adamisom.is/assets/Resume_of_ADAM_ISOM.pdf"
+								target="_blank"
+							>
+								<i class="icon far fa-file"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
 			</section>
 		</main>
 
