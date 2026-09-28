@@ -10,7 +10,7 @@
   <title>{{ site.title | escape }}</title>
   {% endif %}
   <meta name="description" content="{{ page.description | default: page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
-  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  {% unless page.url == "/404.html" %}<link rel="canonical" href="{{ page.url | absolute_url }}">{% endunless %}
   <link rel="stylesheet" href="{{ '/css/site.css' | relative_url }}">
   {% feed_meta %}
 </head>
