@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  {% if page.title %}
+  <title>{{ page.title | escape }} | {{ site.title | escape }}</title>
+  {% else %}
+  <title>{{ site.title | escape }}</title>
+  {% endif %}
+  <meta name="description" content="{{ page.description | default: page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <link rel="stylesheet" href="{{ '/css/site.css' | relative_url }}">
+  {% feed_meta %}
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="site-header">
+    <a class="site-name" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <nav aria-label="Main">
+      <a href="{{ '/notes/' | relative_url }}">Notes</a>
+      <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+    </nav>
+  </header>
+  <main id="content">
+    {{ content }}
+  </main>
+  <footer class="site-footer">
+    <a href="{{ site.links.github }}">GitHub</a>
+    <a href="{{ site.links.linkedin }}">LinkedIn</a>
+    <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+  </footer>
+</body>
+</html>
