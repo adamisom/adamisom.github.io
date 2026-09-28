@@ -4,6 +4,7 @@ author: Adam Isom
 url: https://adamisom.github.io
 baseurl: ""
 lang: en
+timezone: America/Chicago
 theme: null
 
 markdown: kramdown
