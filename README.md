@@ -17,7 +17,7 @@ The old 2021 portfolio is kept in the tag `old-portfolio`.
    ```
 
 3. Preview it with `scripts/preview.sh --drafts` and open http://localhost:4000. The preview needs Docker running, and the first run takes a few minutes to install gems.
-4. When it's ready, move it into `_posts/` and put the publish date at the front of the file name, e.g. `_posts/2026-10-02-kubernetes-in-agent-work.md`. The file name without the date becomes the address, so this note would be at `/notes/kubernetes-in-agent-work/`.
+4. When it's ready, move it into `_posts/` and put the publish date at the front of the file name, e.g. `_posts/2026-10-02-kubernetes-in-agent-work.md`. The file name without the date becomes the address, so this note would be at `/notes/kubernetes-in-agent-work/`. Use today's date or an earlier one, because Jekyll leaves out a note dated in the future, and GitHub Pages only rebuilds when you push.
 5. Run `scripts/check.sh` to build the site and check every link.
 6. Commit and push to `main`. The note is live about a minute later.
 
