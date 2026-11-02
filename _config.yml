@@ -1,0 +1,29 @@
+title: Adam Isom
+description: Short notes on building AI agents, written after each project.
+author: Adam Isom
+url: https://adamisom.github.io
+baseurl: ""
+lang: en
+timezone: America/Chicago
+theme: null
+
+markdown: kramdown
+permalink: /notes/:title/
+
+plugins:
+  - jekyll-feed
+
+feed:
+  path: feed.xml
+
+links:
+  github: https://github.com/adamisom
+  linkedin: https://www.linkedin.com/in/adamisom/
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - scripts/
+  - vendor/
+  - .jekyll-cache/

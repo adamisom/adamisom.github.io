@@ -1,151 +1,25 @@
-<!DOCTYPE html>
-<!-- TODO: add google analytics (see Will's site) -->
-<html>
-	<head>
-		<title>Adam Isom</title>
-		<meta charset="utf-8" />
-		<meta name="author" content="Adam Isom" />
-		<meta
-			name="description"
-			content="Adam Isom, software engineer - portfolio and resume"
-		/>
-		<meta property="og:title" content="Personal website of Adam Isom" />
-		<meta property="og:image" content="assets/img/me.jpg" />
-		<meta property="og:description" content="" />
-		<meta property="og:url" content="https://adamisom.github.io/" />
-		<meta name="viewport" content="width=device-width,initial-scale=1" />
-		<link rel="stylesheet" href="stylesheets/whitespace-reset.css" />
-		<link rel="stylesheet" href="stylesheets/styles.css" />
-		<link rel="icon" href="assets/img/favicon.ico" />
-	</head>
-	<body>
-		<main>
-			<section class="header-contact">
-				<ul class="logo-links">
-					<li>
-						<a href="https://www.linkedin.com/in/adamisom/" target="_blank">
-							<i class="icon fab fa-linkedin"></i>
-						</a>
-					</li>
-					<li>
-						<a href="https://github.com/adamisom" target="_blank">
-							<i class="icon fab fa-github"></i>
-						</a>
-					</li>
-					<li>
-						<a
-							href="https://adamisom.github.io/assets/adamIsomResume.pdf"
-							target="_blank"
-						>
-							<i class="icon far fa-file"></i>
-						</a>
-					</li>
-				</ul>
-			</section>
+---
+layout: default
+---
+<section class="intro">
+  <h1>Adam Isom</h1>
+  <p>I'm a backend and platform engineer in Austin. Most recently I built the approval and audit layer that lets LLM agents write to production. Below are my public projects, and short notes on what I learned building them.</p>
+  <p><a href="{{ site.links.github }}">GitHub</a> and <a href="{{ site.links.linkedin }}">LinkedIn</a></p>
+</section>
 
-			<section id="profile" class="flexbox-center vert">
-				<img id="avatar" src="assets/img/me.jpg" alt="Photo of Adam Isom" />
-				<h2 id="name">Adam Isom</h2>
-				<p>
-					I'm a software engineer with multiple years of experience building
-					full-stack applications using AWS, Node.js, Ruby, JavaScript/ES6+,
-					PostgreSQL, Rails, and React. Most recently, I built
-					<a href="https://haven-secrets.github.io/"
-						>Haven<i
-							id="link-icon"
-							class="inline-icon icon fas fa-external-link-alt"
-						></i></a
-					>, a secrets manager.
-				</p>
-			</section>
+{% if site.data.projects.size > 0 %}
+<section aria-labelledby="projects">
+  <h2 id="projects">Projects</h2>
+  <ul class="project-list">
+    {% for project in site.data.projects %}
+    <li><a href="{{ project.url }}">{{ project.name }}</a>. {{ project.summary }}</li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
 
-			<section id="haven" class="flexbox-center vert">
-				<a href="https://haven-secrets.github.io/" target="_blank">
-					<img
-						id="haven-logo"
-						src="assets/img/haven-logo.png"
-						alt="link to Haven case study"
-					/>
-				</a>
-				<p>
-					Haven is an open-source developer tool for managing your application
-					secrets. Built using Node.js and Amazon Web Services, it is easy to
-					set up and integrate with your Node applications. It protects your
-					secrets through encryption, access control, and injection at runtime.
-					Haven also offers both a UI and a CLI to help make secrets management
-					easy.
-				</p>
-				<a class="btn" href="http://haven-secrets.github.io/" target="_blank"
-					>Read the Case Study</a
-				>
-			</section>
-
-			<section id="projects" class="flexbox-center vert">
-				<h2>Other Projects</h2>
-				<ul class="flexbox-center other-projects-flex-dir">
-					<li class="other-project">
-						<img src="assets/img/kanban.png" alt="TODO" />
-						<h4>Kanban Board</h4>
-						<p>
-							A kanban board application, built with Ruby on Rails, PostgreSQL,
-							React, and Redux.
-						</p>
-					</li>
-					<li class="other-project">
-						<img src="assets/img/airline-routes.png" alt="TODO" />
-						<h4>Airline Routes</h4>
-						<p>
-							A web application that allows viewing and filtering of airline
-							routes, built with React.
-						</p>
-					</li>
-					<li class="other-project">
-						<img src="assets/img/ugh-ticket-manager.png" alt="TODO" />
-						<h4>Ticket Manager</h4>
-						<p>
-							A helpdesk ticket tracking application, built with Ruby on Rails
-							and PostgreSQL.
-						</p>
-					</li>
-				</ul>
-			</section>
-
-			<section class="flexbox-center vert">
-				<h3>Contact</h3>
-				<a href="mailto:adam.r.isom@gmail.com"
-					>adam.r.isom@gmail.com<i
-						id="email-icon"
-						class="inline-icon icon far fa-paper-plane"
-					></i
-				></a>
-				<div class="footer-contact">
-					<ul class="logo-links">
-						<li>
-							<a href="https://www.linkedin.com/in/adamisom/" target="_blank">
-								<i class="icon fab fa-linkedin"></i>
-							</a>
-						</li>
-						<li>
-							<a href="https://github.com/adamisom" target="_blank">
-								<i class="icon fab fa-github"></i>
-							</a>
-						</li>
-						<li>
-							<a
-								href="https://adamisom.github.io/assets/adamIsomResume.pdf"
-								target="_blank"
-							>
-								<i class="icon far fa-file"></i>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</section>
-		</main>
-
-		<script
-			src="https://kit.fontawesome.com/359ef23d69.js"
-			crossorigin="anonymous"
-		></script>
-	</body>
-</html>
+<section aria-labelledby="recent">
+  <h2 id="recent">Recent notes</h2>
+  {% include note-list.html limit=5 %}
+  {% if site.posts.size > 5 %}<p><a href="{{ '/notes/' | relative_url }}">All notes</a></p>{% endif %}
+</section>

@@ -1,0 +1,10 @@
+# Public projects, shown on the home page in this order.
+# The Projects section stays hidden while this list is empty.
+
+- name: governed-write-path
+  url: https://github.com/adamisom/governed-write-path
+  summary: An approval, audit and revert layer for agent writes to a ledger, with an MCP server and a 109-case eval.
+
+- name: test-strength-gate
+  url: https://github.com/adamisom/test-strength-gate
+  summary: A GitHub Action that checks whether an agent's new tests fail on the old code.

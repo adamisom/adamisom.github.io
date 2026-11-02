@@ -1,2 +1,9 @@
 **/.DS_Store
+_site/
+.jekyll-cache/
+vendor/
+.bundle/
 
+# Real drafts stay on this Mac. Only the format sample is committed.
+_drafts/*
+!_drafts/sample-note.md
