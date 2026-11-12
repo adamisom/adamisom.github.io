@@ -27,16 +27,26 @@
   dd { display:inline; }
   img { width:100%; border-radius:10px; margin:28px 0 8px; display:block; }
   a { color:var(--red); }
+  .when .sep { display:none; }
+  @media (max-width:480px) {
+    main { padding:20px 20px 24px; }
+    .top { gap:2px 26px; }
+    .when { margin-top:0; }
+    .when br { display:none; }
+    .when .sep { display:inline; }
+    .status { margin:16px 0; }
+    img { margin:20px 0 0; }
+  }
 </style>
 </head>
 <body>
 <main>
   <div class="top">
     <h1>tea time</h1>
-    <p class="when">most sundays<br>11am to noon</p>
+    <p class="when">most sundays<span class="sep">, </span><br>11am to noon</p>
   </div>
 
-  <div class="status"><b>first one:</b> soon. message me on <a href="https://x.com/adam__isom">x</a> or <a href="https://www.instagram.com/adam__isom/">instagram</a></div>
+  <div class="status"><b>first one:</b> soon. message me on <a href="https://x.com/adam__isom">x</a> or <a href="https://www.instagram.com/adam__isom/">ig</a></div>
 
   <dl>
     <div><dt>where:</dt> <dd><a href="https://maps.google.com/?q=Cafe+Creme+downtown+Austin">cafe creme downtown</a>, outside patio</dd></div>
