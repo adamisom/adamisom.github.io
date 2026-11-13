@@ -2,24 +2,12 @@
 layout: default
 ---
 <section class="intro">
-  <h1>Adam Isom</h1>
-  <p>I'm a backend and platform engineer in Austin. Most recently I built the approval and audit layer that lets LLM agents write to production. Below are my public projects, and short notes on what I learned building them.</p>
-  <p><a href="{{ site.links.github }}">GitHub</a> and <a href="{{ site.links.linkedin }}">LinkedIn</a></p>
+  <p class="aside">looking for a less corporate page? check out <a href="{{ '/hi/' | relative_url }}">/hi</a> or <a href="{{ '/now/' | relative_url }}">/now</a></p>
+  <p>I'm a software engineer in Austin, generalist full-stack though leaning backend and platform. Most recently, at a small startup I built AI agents that safely write production data. Before that, I made a computer use agent at GauntletAI before Cowork came out. Years before that, I made an open-source secrets manager. My public projects are on <a href="{{ site.links.github }}">GitHub</a>, and you can also find me on <a href="{{ site.links.linkedin }}">LinkedIn</a>.</p>
 </section>
 
-{% if site.data.projects.size > 0 %}
-<section aria-labelledby="projects">
-  <h2 id="projects">Projects</h2>
-  <ul class="project-list">
-    {% for project in site.data.projects %}
-    <li><a href="{{ project.url }}">{{ project.name }}</a>. {{ project.summary }}</li>
-    {% endfor %}
-  </ul>
-</section>
-{% endif %}
-
-<section aria-labelledby="recent">
-  <h2 id="recent">Recent notes</h2>
+<section aria-labelledby="notes">
+  <h2 id="notes">Notes</h2>
   {% include note-list.html limit=5 %}
   {% if site.posts.size > 5 %}<p><a href="{{ '/notes/' | relative_url }}">All notes</a></p>{% endif %}
 </section>

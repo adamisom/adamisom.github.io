@@ -1,20 +1,20 @@
 :root {
-  --bg: #fdfdfc;
-  --text: #1f2328;
-  --muted: #59636e;
-  --link: #0b57c2;
-  --rule: #d8dee4;
-  --code-bg: #f2f4f6;
+  --bg: #f2eee3;
+  --text: #222;
+  --muted: #6b655a;
+  --link: #a8261b;
+  --rule: #ddd5c4;
+  --code-bg: #fbf8f1;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #15171a;
-    --text: #e6e8eb;
-    --muted: #a0a8b2;
-    --link: #7fb2ff;
-    --rule: #33383f;
-    --code-bg: #1f2328;
+    --bg: #1c1a17;
+    --text: #ece6da;
+    --muted: #a59e90;
+    --link: #e0604f;
+    --rule: #3a362f;
+    --code-bg: #26231f;
   }
 }
 
@@ -28,7 +28,7 @@ body {
   padding: 0 1rem 3rem;
   background: var(--bg);
   color: var(--text);
-  font: 1.125rem/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font: 1.125rem/1.65 Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   overflow-wrap: break-word;
 }
 
@@ -88,3 +88,6 @@ th, td { border: 1px solid var(--rule); padding: 0.35rem 0.6rem; text-align: lef
   border-top: 1px solid var(--rule);
   font-size: 0.95rem;
 }
+
+.aside { font-family: "Fraunces", Georgia, serif; font-style: italic; font-size: 1.2rem; color: var(--link); }
+.aside a { color: inherit; }

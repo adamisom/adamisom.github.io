@@ -26,7 +26,6 @@ The old 2021 portfolio is kept in the tag `old-portfolio`.
 ## Other changes
 
 - The home page text is in `index.html`.
-- Projects are listed in `_data/projects.yml`. The Projects section on the home page stays hidden until that list has an entry.
 - The GitHub and LinkedIn links are in `_config.yml`.
 - The styles, including dark mode, are in `css/site.css`.
 
