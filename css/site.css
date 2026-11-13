@@ -92,3 +92,11 @@ th, td { border: 1px solid var(--rule); padding: 0.35rem 0.6rem; text-align: lef
 .aside { font-family: "Fraunces", Georgia, serif; font-style: italic; font-size: 1.2rem; color: var(--link); }
 .aside a { color: inherit; }
 
+.aside-arrow { display: none; width: 2.2rem; height: 1.75rem; vertical-align: -0.1rem; margin-left: 0.25rem; }
+
+@media (max-width: 480px) {
+  body { font-size: 1rem; padding-bottom: 1.25rem; }
+  .aside { font-size: 1.05rem; }
+  .aside-links { display: none; }
+  .aside-arrow { display: inline-block; }
+}
