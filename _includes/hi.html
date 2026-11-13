@@ -7,7 +7,7 @@
 <meta name="description" content="adam isom in austin: what i'm doing these days, and where to find me.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plaster&family=Kalam&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plaster&family=Kalam&family=Fraunces:ital@1&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 <style>
   :root { --bg:#f2eee3; --card:#fbf8f1; --ink:#222; --red:#a8261b; --muted:#6b655a; --rule:#ddd5c4; }
   @media (prefers-color-scheme: dark) {
@@ -36,7 +36,11 @@
   .links a { text-decoration:none; color:var(--ink); background:var(--card); border:1px solid var(--rule); border-radius:999px; padding:8px 16px; font-weight:600; font-size:15px; }
   .links a:hover { border-color:var(--red); color:var(--red); }
   a { color:var(--red); }
-  @media (max-width:420px) { header { flex-direction:column; align-items:flex-start; } }
+  ul.lately { list-style:none; }
+  ul.lately li { display:grid; grid-template-columns:3rem 1fr; gap:10px; align-items:baseline; padding:8px 0; border-bottom:1px solid var(--rule); font-size:15px; }
+  ul.lately li:first-child { border-top:1px solid var(--rule); }
+  .lately-date { font-family:Fraunces,Georgia,serif; font-style:italic; font-size:17px; color:var(--red); }
+  @media (max-width:420px) { header { gap:14px; } .photo { width:64px; height:64px; } h1 { font-size:25px; } .sub { font-size:15px; margin-top:2px; } }
 </style>
 </head>
 <body>
@@ -46,7 +50,7 @@
     <img class="photo" src="/hi/adam.jpg" alt="adam" onerror="this.style.visibility='hidden'">
     <div>
       <h1>hi, i'm adam</h1>
-      <p class="sub">i live in austin, texas</p>
+      <p class="sub">📍 in austin</p>
     </div>
   </header>
 
@@ -58,9 +62,8 @@
     <li>making music</li>
     <li>reading books</li>
     <li>writing</li>
-    <li>taking photos</li>
-    <li>learning about anime and other new interests</li>
-    <li>i also like walks, runs, weights, skating…</li>
+    <li>learning about things (currently anime)</li>
+    <li>likes: walks, runs, weights, skating…</li>
   </ul>
 
   <p class="nerd"><span>nerd about coffee + cafes ☕</span>
@@ -85,8 +88,12 @@
     <a href="https://x.com/adam__isom/highlights">twitter</a>
     <a href="https://www.instagram.com/adam__isom/">instagram</a>
     <a href="https://substack.com/@adamisom">substack</a>
-    <a href="/">work</a>
   </p>
+
+  <h2>lately</h2>
+  <ul class="lately">
+{% for item in site.data.lately %}    <li><span class="lately-date">{{ item.date }}</span> <span>{{ item.text }}</span></li>
+{% endfor %}  </ul>
 
 {% if include.now %}  <p class="away">if you're not from austin, texas—well, that's where i live, happy to get coffee/tea/etc if you're in town!</p>
 {% endif %}</main>
