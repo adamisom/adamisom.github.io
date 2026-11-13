@@ -89,7 +89,7 @@ th, td { border: 1px solid var(--rule); padding: 0.35rem 0.6rem; text-align: lef
   font-size: 0.95rem;
 }
 
-.aside { font-family: "Fraunces", Georgia, serif; font-style: italic; font-size: 1.2rem; color: var(--link); }
+.aside { font-family: "Fraunces", Georgia, serif; font-size: 1.1rem; color: var(--link); transform: skewX(-8deg); transform-origin: left bottom; }
 .aside a { color: inherit; }
 
 .aside-arrow { display: none; width: 2.2rem; height: 1.75rem; vertical-align: -0.1rem; margin-left: 0.25rem; }
@@ -100,3 +100,4 @@ th, td { border: 1px solid var(--rule); padding: 0.35rem 0.6rem; text-align: lef
   .aside-links { display: none; }
   .aside-arrow { display: inline-block; }
 }
+.site-header nav a { display: inline-block; font-family: "Fraunces", Georgia, serif; font-size: 1.1rem; transform: skewX(-8deg); }
